@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SDN Login System</title>
+</head>
+<body>
+
+<h2>SDN SYSTEM LOGIN</h2>
+
+<form onsubmit="return login()">
+    Username: <input type="text" id="user"><br><br>
+    Password: <input type="password" id="pass"><br><br>
+    <button type="submit">Login</button>
+</form>
+
+<p id="msg"></p>
+
+<script>
+function login() {
+    var u = document.getElementById("user").value;
+    var p = document.getElementById("pass").value;
+
+    if (u === "ADMIN" && p === "1234") {
+        document.body.innerHTML = "<h1>WELCOME TO SDN SYSTEM</h1>";
+    } else {
+        document.getElementById("msg").innerHTML = "Wrong ID or Password";
+    }
+    return false;
+}
+</script>
+
+</body>
+</html>
